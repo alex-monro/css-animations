@@ -9,7 +9,7 @@ A website exploring CSS animations and their practical applications in web devel
 
 Visit the live site: 
 
-git commit -m "Initial commit"
+OR
 
 Clone the repository:
 ```bash
