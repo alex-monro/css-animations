@@ -1,0 +1,181 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN NORMALIZE.CSS)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Components
+	- Header
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+body {
+  background-color: #ededee;
+}
+/* Typography
+--------------------------------------------- */
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #292929;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 1rem 0;
+  color: #292929;
+}
+
+h1 {
+  font-size: clamp(2rem, 1.7rem + 1.5vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.75rem);
+}
+
+p {
+  margin: 0;
+}
+
+.logo {
+  font-family: "M Plus Rounded 1c", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #d303dd;
+}
+
+/* Links 
+--------------------------------------------- */
+
+/* Header
+--------------------------------------------- */
+.site-navigation {
+  display: flex;
+}
+#header-menu {
+  list-style: none;
+  padding: 1rem 0.5rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 29000;
+  background-color: #fef9fe;
+  display: none;
+}
+
+#header-menu.toggled {
+  display: block;
+  margin: 0;
+}
+#header-menu a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem;
+  color: #292929;
+}
+
+#header-menu a:hover,
+#header-menu a:active {
+  color: ;
+  text-decoration: 2px solid underline;
+  text-underline-offset: 0.75rem;
+}
+
+#header-menu a:focus {
+  outline: 1px solid;
+}
+
+#header-menu li {
+  padding: 0.5rem 0;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.menu-toggle svg {
+  width: 2.5rem;
+}
+
+#nav-button:hover,
+#nav-button:active,
+#nav-button:focus {
+  color: ;
+}
+
+#nav-button:focus {
+  outline: 1px solid;
+}
+
+#logo {
+  flex-shrink: 0;
+}
+
+/* BASE MOBILE ENDS HERE
+===================================== */
+@media (min-width: 50em) {
+  .site-header {
+    padding: 2.5rem 5rem 2rem 5rem;
+  }
+
+  .site-header {
+    padding: 1rem 8rem;
+  }
+  #nav-button {
+    display: none;
+  }
+  #nav-list {
+    display: block;
+    position: static;
+    display: flex;
+    background-color: transparent;
+    gap: clamp(0.5rem, 0rem + 2.5vw, 3rem);
+  }
+}
+/* Footer
+--------------------------------------------- */
+
+footer {
+  background-color: #c7aacc;
+  text-align: center;
+  padding: 3rem;
+  position: fixed;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  color: black;
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  list-style: none;
+  padding: 0;
+  gap: 16px;
+}

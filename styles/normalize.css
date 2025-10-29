@@ -375,7 +375,7 @@ video {
 }
 
 /* Text meant only for screen readers. */
-.screen-reader-text {
+.skip-link {
   border: 0;
   clip-path: inset(50%);
   height: 1px;
@@ -387,7 +387,7 @@ video {
   word-wrap: normal !important;
 }
 
-.screen-reader-text:focus {
+.skip-link:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
