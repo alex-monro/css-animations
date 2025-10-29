@@ -3,24 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Group 01 - Github Test</title>
+    <title>CSS Animations</title>
+
+    <!-- Desctiption for SEO purposes -->
+    <meta
+      name="description"
+      content="Learn Css animations. A guide to bring your website to life!"
+    />
+
+    <!-- Favicon -->
+
+    <!-- Fonts -->
+
+    <!-- Css -->
     <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/mn-page-header.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+
+    <!-- Scripts -->
+    <script src="scripts/navigation.js" defer></script>
   </head>
   <body>
-    <header class="site-header">
-      <p id="site-logo">Logo</p>
-      <nav class="site-navigation">
-        <ul class="nav-list">
-          <li>Home</li>
-          <li>About</li>
-          <li>Credits</li>
-        </ul>
-      </nav>
-    </header>
-    <title>Group Project - GitHub Test</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
+    <div class="site-wrapper">
+      <header class="site-header">
+        <!-- Skip link for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+
+        <!-- Navigation -->
+        <nav class="site-navigation" id="site-navigation">
+          <button
+            class="menu-toggle"
+            aria-controls="header-menu"
+            aria-expanded="false"
+            aria-label="Menu Toggle"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 24 24"
+            >
+              <title>Menu Icon</title>
+              <path
+                d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"
+              ></path>
+            </svg>
+          </button>
+
+          <ul class="nav-menu" id="header-menu">
+            <li><a href="#">section</a></li>
+            <li><a href="#">section</a></li>
+            <li><a href="#">section</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- main content -->
+
+      <main id="main-content">
+        <!-- Hero -->
+        <section class="hero">
+          <h1 class="hero-title">Css Animations</h1>
+        </section>
+
+        <!-- Introduction  -->
+        <section class="introduction">
+          <h2 class="section-title">Introduction to CSS Animations</h2>
+        </section>
+
+        <!-- Keyframes -->
+        <section class="keyframes">
+          <h2 class="section-title">Keyframes</h2>
+        </section>
+
+        <!-- Transitions -->
+        <section class="transitions">
+          <h2 class="section-title">Transisions</h2>
+        </section>
+
+        <!-- Properties -->
+        <section class="properties">
+          <h2 class="section-title">Properties</h2>
+        </section>
+
+        <!-- Functions -->
+        <section class="functions">
+          <h2 class="section-title">Functions</h2>
+        </section>
+
+        <!-- Examples -->
+        <section class="examples">
+          <h2 class="section-title">Examples</h2>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2025 CSS Animations Guide. For Educational Purposes Only.</p>
+      </footer>
+    </div>
   </body>
 </html>
