@@ -22,11 +22,9 @@
     />
 
     <!-- Css -->
-
     <link rel="stylesheet" href="styles/intro-section.css" />
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/time-function-section.css" />
 
     <!-- Scripts -->
     <script src="scripts/navigation.js" defer></script>
@@ -111,8 +109,171 @@
         </section>
 
         <!-- Keyframes -->
+        <!-- Keyframes -->
         <section class="keyframes">
           <h2 class="section-title">Keyframes</h2>
+          <p>
+            @keyframes is a CSS rule that lets you create animations by defining
+            what styles an element should have at different points during the
+            animation (for example: start, middle, end).
+          </p>
+
+          <!-- Syntax Section -->
+          <div class="syntax-section">
+            <h3>Basic Syntax</h3>
+
+            <dl class="syntax-wrapper">
+              <div class="definition-card">
+                <dt><code>animation-name</code></dt>
+                <dd>
+                  <p>
+                    Give your keyframe any name you want (like "slide", "fade",
+                    or "spin"). Once it's defined, you can reuse the animation
+                    as many times as you want.
+                  </p>
+                  <div class="syntax-box">
+                    <pre><code>@keyframes <span class="highlight">fade</span> {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}</code></pre>
+                  </div>
+                </dd>
+              </div>
+
+              <div class="definition-card">
+                <dt><code>from</code> &amp; <code>to</code></dt>
+                <dd>
+                  <p>
+                    Define where your animation starts (<code>from</code>) and
+                    where it ends (<code>to</code>).
+                  </p>
+                  <div class="syntax-box">
+                    <pre><code>@keyframes fade {
+  <span class="highlight">from</span> { opacity: 0; }
+  <span class="highlight">to</span> { opacity: 1; }
+}</code></pre>
+                  </div>
+                </dd>
+              </div>
+
+              <div class="definition-card">
+                <dt><code>percentages</code></dt>
+                <dd>
+                  <p>
+                    Use percentages to add middle points to your animations.
+                    <code>0%</code> = start, <code>50%</code> = halfway,
+                    <code>100%</code> = end.
+                  </p>
+                  <div class="syntax-box">
+                    <pre><code>@keyframes bounce {
+  <span class="highlight">0%</span> { top: 0; }
+  <span class="highlight">50%</span> { top: 100px; }
+  <span class="highlight">100%</span> { top: 0; }
+}</code></pre>
+                  </div>
+                </dd>
+              </div>
+
+              <div class="definition-card">
+                <dt><code>animation</code></dt>
+                <dd>
+                  <p>
+                    Use the <code>animation</code> property to apply your
+                    keyframe to any element. The same keyframe can be reused on
+                    multiple elements!
+                  </p>
+                  <div class="syntax-box">
+                    <pre><code>.box {
+  <span class="highlight">animation</span>: fade 2s ease-in-out;
+}
+
+.circle {
+  <span class="highlight">animation</span>: fade 3s linear;
+}</code></pre>
+                  </div>
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <h3>Example</h3>
+          <div class="example-containers">
+            <figure class="code-example">
+              <pre><code>@keyframes slide {
+  from { left: 0; }
+  to { left: calc(100% - 50px); }
+}
+.box {
+  animation: slide 2s infinite;
+}</code></pre>
+            </figure>
+
+            <figure class="demo-example">
+              <div class="square"></div>
+            </figure>
+          </div>
+
+          <!-- Breakdown Section -->
+          <div class="breakdown-section">
+            <h3>Breaking Down the Code</h3>
+            <div class="breakdown-grid">
+              <div class="breakdown-item">
+                <code>@keyframes slide</code>
+                <p>
+                  Creates an animation called "slide" that can be reused on any
+                  element in your CSS.
+                </p>
+              </div>
+
+              <div class="breakdown-item">
+                <code
+                  >from { left: 0; }<br />to { left: calc(100% - 50px); }</code
+                >
+                <p>
+                  Defines the start position (left edge) and end position (right
+                  side) of the animation.
+                </p>
+              </div>
+
+              <div class="breakdown-item">
+                <code>animation: slide 2s infinite</code>
+                <p>
+                  Applies the animation to an element, running for 2 seconds and
+                  repeating forever.
+                </p>
+              </div>
+
+              <div class="breakdown-item">
+                <code>calc(100% - 50px)</code>
+                <p>
+                  We use this so the square ends exactly at the container’s
+                  right edge. The container is 100% wide, and subtracting 50px
+                  (the square’s width) keeps it fully visible instead of sliding
+                  off-screen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Transitions -->
+        <section class="transitions">
+          <h2 class="section-title">Transitions</h2>
+        </section>
+
+        <!-- Properties -->
+        <section class="properties">
+          <h2 class="section-title">Properties</h2>
+        </section>
+
+        <!-- Functions -->
+        <section class="functions">
+          <h2 class="section-title">Functions</h2>
+        </section>
+
+        <!-- Examples -->
+        <section class="performance">
+          <h2 class="section-title">Performance and Accessibility</h2>
         </section>
 
         <!-- Transitions -->
