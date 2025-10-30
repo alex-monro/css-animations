@@ -54,10 +54,6 @@ h3 {
   font-size: clamp(1rem, 0.966rem + 0.17vw, 1.17rem);
 }
 
-p {
-  margin: 0;
-}
-
 #logo {
   font-family: "M Plus Rounded 1c", sans-serif;
   font-weight: 800;

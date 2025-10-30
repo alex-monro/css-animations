@@ -22,9 +22,11 @@
     />
 
     <!-- Css -->
+
     <link rel="stylesheet" href="styles/intro-section.css" />
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/time-function-section.css" />
 
     <!-- Scripts -->
     <script src="scripts/navigation.js" defer></script>
@@ -125,23 +127,25 @@
 
         <!-- Functions -->
         <section class="functions">
-          <h2 class="section-title">Timing Functions</h2>
-          <p>
-            Timing functions — often called easing — control how an animation
-            changes speed as it runs. Without them, motion moves at one constant
-            rate, like a robot sliding from point A to B. With easing,
-            animations feel smoother and more natural. They can ease in slowly,
-            coast to a stop, or bounce a little for fun. CSS includes built-in
-            options like ease, linear, and ease-in-out, or you can create custom
-            motion using cubic-bezier() for full control over the curve.
-          </p>
+          <div class="function-text">
+            <h2 class="section-title">Timing Functions</h2>
+            <p>
+              Timing functions — often called easing — control how an animation
+              changes speed as it runs. Without them, motion moves at one
+              constant rate, like a robot sliding from point A to B. With
+              easing, animations feel smoother and more natural. They can ease
+              in slowly, coast to a stop, or bounce a little for fun. CSS
+              includes built-in options like ease, linear, and ease-in-out, or
+              you can create custom motion using cubic-bezier() for full control
+              over the curve.
+            </p>
+          </div>
 
           <div class="time-demo">
-            <div class="box-ease">robo-box</div>
-            <div class="box-ease">ease</div>
-            <div class="box-ease">linear</div>
-            <div class="box-ease">ease-in</div>
-            <div class="box-ease">ease-out</div>
+            <div class="box-tf" id="ease">ease</div>
+            <div class="box-tf" id="linear">linear</div>
+            <div class="box-tf" id="ease-in">ease-in</div>
+            <div class="box-tf" id="ease-out">ease-out</div>
           </div>
         </section>
 
