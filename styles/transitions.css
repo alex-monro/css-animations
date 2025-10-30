@@ -1,0 +1,132 @@
+/* ===== GENERAL STYLES ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #222;
+    line-height: 1.6;
+    margin: 40px;
+}
+
+.section-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.block-title {
+    font-size: 1.4em;
+    margin-top: 40px;
+    color: #333;
+}
+
+pre,
+code {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    font-family: Consolas, monospace;
+    overflow-x: auto;
+}
+
+/* Common box container styling */
+.transition-example {
+    margin-top: 20px;
+}
+
+.transition-example p {
+    margin-bottom: 10px;
+}
+
+/* Base box design (shared styles) */
+.transition-section .box,
+.transition-section .duration-box,
+.transition-section .timing-box,
+.transition-section .delay-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: #2196f3;
+    transition: all 0.6s ease;
+}
+
+/* ===== DURATION ===== */
+.duration-box:hover {
+    background-color: #4caf50;
+    transform: scale(1.2);
+}
+
+/* ===== TIMING FUNCTION ===== */
+.timing-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.timing-box {
+    transition-property: transform, background-color;
+    transition-duration: 1.5s;
+}
+
+.timing-box:hover {
+    transform: translateX(150px);
+    background-color: #4caf50;
+}
+
+.timing-box.ease {
+    transition-timing-function: ease;
+}
+
+.timing-box.linear {
+    transition-timing-function: linear;
+}
+
+.timing-box.ease-in {
+    transition-timing-function: ease-in;
+}
+
+.timing-box.ease-out {
+    transition-timing-function: ease-out;
+}
+
+.timing-box.ease-in-out {
+    transition-timing-function: ease-in-out;
+}
+
+/* ===== DELAY ===== */
+.delay-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.delay-box {
+    transition: transform 0.6s ease, background-color 0.6s ease;
+}
+
+.delay-box:hover {
+    background-color: #4caf50;
+    transform: translateY(-60px);
+}
+
+.delay0 {
+    transition-delay: 0s;
+}
+
+.delay1 {
+    transition-delay: 0.3s;
+}
+
+.delay2 {
+    transition-delay: 0.6s;
+}
+
+.delay3 {
+    transition-delay: 0.9s;
+}

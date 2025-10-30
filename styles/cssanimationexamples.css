@@ -1,0 +1,40 @@
+ body {
+     font-family: Arial, sans-serif;
+     background-color: white;
+     margin: 40px;
+ }
+
+ h1 {
+     font-size: 2em;
+     font-weight: bold;
+ }
+
+ h2 {
+     font-size: 1.3em;
+     font-weight: bold;
+     margin-top: 40px;
+ }
+
+ .example {
+     margin-bottom: 50px;
+ }
+
+ .image {
+     margin-top: 10px;
+ }
+
+ img {
+     border: 1px solid #ccc;
+     border-radius: 4px;
+ }
+
+ .content {
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
+ }
+
+ .example img {
+     width: 250px;
+     height: auto;
+ }

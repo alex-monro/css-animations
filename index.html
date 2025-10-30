@@ -20,6 +20,8 @@
       href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles/cssanimationexamples.css">
+    <link rel="stylesheet" href="styles/transitions.css">
    
 
     <!-- Css -->
@@ -105,15 +107,120 @@
             </table>
         </section>
 
+        <section class="examples">
+          <h3>Examples</h3>
+          
+          <div class="content">
+            <div class="example">
+              <h4>Button hover effects</h4>
+              <div class="image">
+                <img src="#" alt="Button hover effect example">
+              </div>
+            </div>
+          
+            <div class="example">
+              <h4>Dropdown or menu reveals</h4>
+              <div class="image">
+                <img src="#" alt="Dropdown menu example">
+              </div>
+            </div>
+          
+            <div class="example">
+              <h4>Loading spinners</h4>
+              <div class="image">
+                <img src="#" alt="Loading spinner example">
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- Keyframes -->
         <section class="keyframes">
           <h2 class="section-title">Keyframes</h2>
         </section>
 
-        <!-- Transitions -->
-        <section class="transitions">
-          <h2 class="section-title">Transitions</h2>
-        </section>
+        <!-- CSS Transitions -->
+      <section class="transition-section">
+        <h2 class="section-title">Transitions</h2>
+      
+        <p>
+          CSS transitions make property changes (like color, size, or position) happen gradually instead of instantly.
+          It allows you to change property values smoothly, over a given duration.
+          They’re great for simple hover effects.
+        </p>
+      
+        <!-- Duration -->
+        <div class="transition-block transition-duration">
+          <h3 class="block-title">Transition Duration</h3>
+          <p>
+            Defines how long the transition lasts. Written in seconds (<code>s</code>) or milliseconds (<code>ms</code>).
+          </p>
+      
+          <pre><code>div {
+        transition-duration: 0.5s;
+      }</code></pre>
+      
+          <div class="transition-example">
+            <p><strong>Live Example:</strong> Hover over the box below 👇</p>
+            <div class="duration-box"></div>
+          </div>
+        </div>
+      
+        <!-- Timing Function -->
+        <div class="transition-block transition-timing">
+          <h3 class="block-title">Transition Timing-Function</h3>
+          <p>
+            Controls the <strong>speed curve</strong> of the transition — how it accelerates or slows down.
+          </p>
+      
+          <ul>
+            <li><strong>ease</strong> → starts slow, speeds up, then slows down (default)</li>
+            <li><strong>linear</strong> → same speed throughout</li>
+            <li><strong>ease-in</strong> → slow start</li>
+            <li><strong>ease-out</strong> → slow end</li>
+            <li><strong>ease-in-out</strong> → slow start and end</li>
+          </ul>
+      
+          <pre><code>div {
+        transition-timing-function: ease-in-out;
+      }</code></pre>
+      
+          <div class="transition-example">
+            <p>Hover over each box to see how different timing functions affect the animation speed:</p>
+            <div class="timing-examples">
+              <div class="timing-box ease">ease</div>
+              <div class="timing-box linear">linear</div>
+              <div class="timing-box ease-in">ease-in</div>
+              <div class="timing-box ease-out">ease-out</div>
+              <div class="timing-box ease-in-out">ease-in-out</div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Delay -->
+        <div class="transition-block transition-delay">
+          <h3 class="block-title">Transition Delay</h3>
+          <p>
+            Specifies how long to wait before the transition starts. It allows for <em>staggered</em> or
+            <em>sequential</em> animations.
+          </p>
+      
+          <pre><code>div {
+        transition-delay: 0.3s;
+      }</code></pre>
+      
+          <div class="transition-example">
+            <p>Hover over the boxes below — each starts its animation with a different delay:</p>
+            <div class="delay-examples">
+              <div class="delay-box delay0">0s</div>
+              <div class="delay-box delay1">0.3s</div>
+              <div class="delay-box delay2">0.6s</div>
+              <div class="delay-box delay3">0.9s</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
         <!-- Properties -->
         <section class="properties">
