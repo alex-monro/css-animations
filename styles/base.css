@@ -1,4 +1,4 @@
-css/*--------------------------------------------------------------
+/*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Generic (CALLED IN NORMALIZE.CSS)
@@ -17,17 +17,20 @@ css/*--------------------------------------------------------------
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-body {
-  background-color: #ededee;
+section {
+  padding: 1rem 2rem;
 }
+
 /* Typography
 --------------------------------------------- */
 body {
+  background-color: #fcfcfc;
   font-family: "Work Sans", sans-serif;
   font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
   font-weight: 400;
   line-height: 1.6;
-  color: #292929;
+  color: #000000;
+  padding-bottom: 6rem;
 }
 
 h1,
@@ -36,19 +39,19 @@ h3 {
   font-family: "Quicksand", sans-serif;
   margin: 0;
   padding: 1rem 0;
-  color: #292929;
+  color: #000000;
 }
 
 h1 {
-  font-size: clamp(2rem, 1.7rem + 1.5vw, 3.5rem);
+  font-size: clamp(1.8rem, 1.76rem + 0.2vw, 2rem);
 }
 
 h2 {
-  font-size: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
+  font-size: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
 }
 
 h3 {
-  font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.75rem);
+  font-size: clamp(1rem, 0.966rem + 0.17vw, 1.17rem);
 }
 
 p {
@@ -60,7 +63,8 @@ p {
   font-weight: 800;
   font-size: 2rem;
   text-transform: uppercase;
-  color: ;
+  color: #6e3678;
+  flex-shrink: 0;
 }
 
 /* Links 
@@ -105,7 +109,7 @@ p {
 
 #header-menu a:hover,
 #header-menu a:active {
-  color: ;
+  color: #6e3678;
   text-decoration: 2px solid underline;
   text-underline-offset: 0.75rem;
 }
@@ -133,20 +137,17 @@ p {
 .menu-toggle:hover,
 .menu-toggle:active,
 .menu-toggle:focus {
-  color: ;
+  color: #6e3678;
 }
 
 .menu-toggle:focus {
   outline: 1px solid;
 }
 
-#logo {
-  flex-shrink: 0;
-}
-
 /* BASE MOBILE ENDS HERE
 ===================================== */
 @media (min-width: 50em) {
+  section,
   .site-header {
     padding: 1rem 8rem;
   }
@@ -180,15 +181,4 @@ footer {
   margin: 0 auto;
   width: 100%;
   color: black;
-}
-
-.footer-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  list-style: none;
-  padding: 0;
-  gap: 16px;
 }
