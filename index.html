@@ -20,10 +20,9 @@
       href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-   
 
     <!-- Css -->
-    <link rel="stylesheet" href="styles/intro-section.css">
+    <link rel="stylesheet" href="styles/intro-section.css" />
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/base.css" />
 
@@ -77,32 +76,36 @@
         <section class="introduction">
           <h2 class="section-title">Introduction to CSS Animations</h2>
           <h3 class="animation-def">What Are Animations?</h3>
-          <p>Animations are visual changes that make elements move or change appearance over time. They bring websites to life by adding movement and interaction.</p>
+          <p>
+            Animations are visual changes that make elements move or change
+            appearance over time. They bring websites to life by adding movement
+            and interaction.
+          </p>
         </section>
 
         <section>
-            <table>
-                <tr>
-                    <th>Feature</th>
-                    <th>Transitions</th>
-                    <th>Animations</th>
-                </tr>
-                <tr>
-                    <td>Trigger</td>
-                    <td>Needs a user action (hover, click)</td>
-                    <td>Can start automatically</td>
-                </tr>
-                <tr>
-                    <td>Keyframes</td>
-                    <td>Only start and end</td>
-                    <td>Multiple keyframes and complex motion</td>
-                </tr>
-                <tr>
-                    <td>Example</td>
-                    <td>Button changes color on hover</td>
-                    <td>Object bouncing repeatedly</td>
-                </tr>
-            </table>
+          <table>
+            <tr>
+              <th>Feature</th>
+              <th>Transitions</th>
+              <th>Animations</th>
+            </tr>
+            <tr>
+              <td>Trigger</td>
+              <td>Needs a user action (hover, click)</td>
+              <td>Can start automatically</td>
+            </tr>
+            <tr>
+              <td>Keyframes</td>
+              <td>Only start and end</td>
+              <td>Multiple keyframes and complex motion</td>
+            </tr>
+            <tr>
+              <td>Example</td>
+              <td>Button changes color on hover</td>
+              <td>Object bouncing repeatedly</td>
+            </tr>
+          </table>
         </section>
 
         <!-- Keyframes -->
@@ -122,7 +125,24 @@
 
         <!-- Functions -->
         <section class="functions">
-          <h2 class="section-title">Functions</h2>
+          <h2 class="section-title">Timing Functions</h2>
+          <p>
+            Timing functions — often called easing — control how an animation
+            changes speed as it runs. Without them, motion moves at one constant
+            rate, like a robot sliding from point A to B. With easing,
+            animations feel smoother and more natural. They can ease in slowly,
+            coast to a stop, or bounce a little for fun. CSS includes built-in
+            options like ease, linear, and ease-in-out, or you can create custom
+            motion using cubic-bezier() for full control over the curve.
+          </p>
+
+          <div class="time-demo">
+            <div class="box-ease">robo-box</div>
+            <div class="box-ease">ease</div>
+            <div class="box-ease">linear</div>
+            <div class="box-ease">ease-in</div>
+            <div class="box-ease">ease-out</div>
+          </div>
         </section>
 
         <!-- Examples -->
