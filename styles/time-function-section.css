@@ -1,0 +1,77 @@
+.functions-text {
+  background-color: #e7d0ec;
+  border-left: 1rem solid #6e3678;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+}
+.time-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 1rem 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-container {
+  width: 20rem;
+  height: auto;
+  margin: 0;
+  border: 0.125rem solid #6e3678;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 10px lightslategray;
+}
+
+.box-text {
+  background-color: #6e3678;
+  padding: 1rem;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.box-tf {
+  width: 5rem;
+  height: 5rem;
+  margin: 4rem;
+  background-image: linear-gradient(
+    300deg,
+    hsl(292deg 23% 86%) 0%,
+    hsl(292deg 24% 82%) 26%,
+    hsl(292deg 25% 78%) 39%,
+    hsl(291deg 25% 73%) 50%,
+    hsl(291deg 19% 61%) 61%,
+    hsl(291deg 17% 49%) 74%,
+    hsl(291deg 25% 37%) 100%
+  );
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: slide 5s infinite;
+}
+
+@keyframes slide {
+  from {
+    left: 0;
+  }
+  to {
+    left: 40%;
+  }
+}
+
+#ease {
+  animation-timing-function: ease;
+}
+
+#linear {
+  animation-timing-function: linear;
+}
+#ease-in {
+  animation-timing-function: ease-in;
+}
+
+#ease-out {
+  animation-timing-function: ease-out;
+}
