@@ -38,7 +38,7 @@ h2,
 h3 {
   font-family: "Quicksand", sans-serif;
   margin: 0;
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
   color: #000000;
 }
 
@@ -52,10 +52,6 @@ h2 {
 
 h3 {
   font-size: clamp(1rem, 0.966rem + 0.17vw, 1.17rem);
-}
-
-p {
-  margin: 0;
 }
 
 #logo {
