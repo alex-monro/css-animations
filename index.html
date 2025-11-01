@@ -20,6 +20,10 @@
       href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles/cssanimationexamples.css">
+    <link rel="stylesheet" href="styles/transitions.css">
+    <link rel="stylesheet" href="styles/table.css">
+   
 
     <!-- Css -->
 
@@ -86,6 +90,29 @@
           </p>
         </section>
 
+        <section class="feature-comparison">
+          <table class="comparison-table">
+            <tr>
+              <th>Feature</th>
+              <th>Transitions</th>
+              <th>Animations</th>
+            </tr>
+            <tr>
+              <td>Trigger</td>
+              <td>Needs a user action (hover, click)</td>
+              <td>Can start automatically</td>
+            </tr>
+            <tr>
+              <td>Keyframes</td>
+              <td>Only start and end</td>
+              <td>Multiple keyframes and complex motion</td>
+            </tr>
+            <tr>
+              <td>Example</td>
+              <td>Button changes color on hover</td>
+              <td>Object bouncing repeatedly</td>
+            </tr>
+          </table>
         <section>
           <table>
             <tr>
@@ -111,178 +138,97 @@
           </table>
         </section>
 
+
         <!-- Keyframes -->
 
         <section class="keyframes">
           <h2 class="section-title">Keyframes</h2>
+        </section>
+
+        <!-- CSS Transitions Section -->
+        <section class="transition-section">
+          <h2 class="section-title">CSS Transitions</h2>
+        
           <p>
-            @keyframes is a CSS rule that lets you create animations by defining
-            what styles an element should have at different points during the
-            animation (for example: start, middle, end).
+            CSS transitions make property changes (like color, size, or position) happen gradually instead of instantly.
+            They allow you to change property values smoothly, over a given duration.
+            They’re great for simple hover effects.
           </p>
 
-          <!-- Syntax Section -->
-          <div class="syntax-section">
-            <h3>Basic Syntax</h3>
+          <!-- Duration Example -->
+          <div class="transition-block transition-duration">
+            <h3 class="block-title">Transition Duration</h3>
+            <p>
+              Defines how long the transition lasts. Written in seconds <code>(s)</code> or milliseconds <code>(ms)</code>
+            </p>
 
-            <dl class="syntax-wrapper">
-              <div class="definition-card">
-                <dt><code>animation-name</code></dt>
-                <dd>
+              <pre><code>div {
+                transition-duration: 0.5s;
+              }</code></pre>
+
+              <div class="transition-example">
+                <p><strong>Live Example:</strong> Hover over the box below 👇</p>
+                <div class="example-cards">
+                  <div class="example-box duration-box">0.5s</div>
+                </div>
+              </div>
+              </div>
+
+            <!-- Timing Function Example -->
+                <div class="transition-block transition-timing">
+                  <h3 class="block-title">Transition Timing Function</h3>
                   <p>
-                    Give your keyframe any name you want (like "slide", "fade",
-                    or "spin"). Once it's defined, you can reuse the animation
-                    as many times as you want.
+                    Controls the <strong>speed curve</strong> of the transition — how it accelerates or slows down.
                   </p>
-                  <div class="syntax-box">
-                    <pre><code>@keyframes <span class="highlight">fade</span> {
-  from { opacity: 0; }
-  to { opacity: 1; }
+
+                    <ul>
+                      <li><strong>ease</strong> → starts slow, speeds up, then slows down (default)</li>
+                      <li><strong>linear</strong> → same speed throughout</li>
+                      <li><strong>ease-in</strong> → slow start</li>
+                      <li><strong>ease-out</strong> → slow end</li>
+                      <li><strong>ease-in-out</strong> → slow start and end</li>
+                    </ul>
+
+                  <pre><code>div {
+  transition-timing-function: ease-in-out;
 }</code></pre>
-                  </div>
-                </dd>
-              </div>
 
-              <div class="definition-card">
-                <dt><code>from</code> &amp; <code>to</code></dt>
-                <dd>
-                  <p>
-                    Define where your animation starts (<code>from</code>) and
-                    where it ends (<code>to</code>).
-                  </p>
-                  <div class="syntax-box">
-                    <pre><code>@keyframes fade {
-  <span class="highlight">from</span> { opacity: 0; }
-  <span class="highlight">to</span> { opacity: 1; }
-}</code></pre>
-                  </div>
-                </dd>
-              </div>
 
-              <div class="definition-card">
-                <dt><code>percentages</code></dt>
-                <dd>
-                  <p>
-                    Use percentages to add middle points to your animations.
-                    <code>0%</code> = start, <code>50%</code> = halfway,
-                    <code>100%</code> = end.
-                  </p>
-                  <div class="syntax-box">
-                    <pre><code>@keyframes bounce {
-  <span class="highlight">0%</span> { top: 0; }
-  <span class="highlight">50%</span> { top: 100px; }
-  <span class="highlight">100%</span> { top: 0; }
-}</code></pre>
-                  </div>
-                </dd>
-              </div>
+                    <div class="transition-example">
+                      <p>Hover over each box to see how different timing functions affect animation speed:</p>
+                      <div class="example-cards">
+                        <div class="example-box ease">ease</div>
+                        <div class="example-box linear">linear</div>
+                        <div class="example-box ease-in">ease-in</div>
+                        <div class="example-box ease-out">ease-out</div>
+                        <div class="example-box ease-in-out">ease-in-out</div>
+                      </div>
+                    </div>
+                    </div>
 
-              <div class="definition-card">
-                <dt><code>animation</code></dt>
-                <dd>
-                  <p>
-                    Use the <code>animation</code> property to apply your
-                    keyframe to any element. The same keyframe can be reused on
-                    multiple elements!
-                  </p>
-                  <div class="syntax-box">
-                    <pre><code>.box {
-  <span class="highlight">animation</span>: fade 2s ease-in-out;
-}
+          <!-- Delay Example -->
+                    <div class="transition-block transition-delay">
+                      <h3 class="block-title">Transition Delay</h3>
+                      <p>
+                        Specifies how long to wait before the transition starts. It allows for <em>staggered</em> or
+                        <em>sequential</em> animations.
+                      </p>
 
-.circle {
-  <span class="highlight">animation</span>: fade 3s linear;
-}</code></pre>
-                  </div>
-                </dd>
-              </div>
-            </dl>
-          </div>
+                      <pre><code>div {
+                      transition-delay: 0.3s;
+                    }</code></pre>
 
-          <h3>Example</h3>
-          <div class="example-containers">
-            <figure class="code-example">
-              <pre><code>@keyframes slide {
-  from { left: 0; }
-  to { left: calc(100% - 50px); }
-}
-.box {
-  animation: slide 2s infinite;
-}</code></pre>
-            </figure>
-
-            <figure class="demo-example">
-              <div class="square"></div>
-            </figure>
-          </div>
-
-          <!-- Breakdown Section -->
-          <div class="breakdown-section">
-            <h3>Breaking Down the Code</h3>
-            <div class="breakdown-grid">
-              <div class="breakdown-item">
-                <code>@keyframes slide</code>
-                <p>
-                  Creates an animation called "slide" that can be reused on any
-                  element in your CSS.
-                </p>
-              </div>
-
-              <div class="breakdown-item">
-                <code
-                  >from { left: 0; }<br />to { left: calc(100% - 50px); }</code
-                >
-                <p>
-                  Defines the start position (left edge) and end position (right
-                  side) of the animation.
-                </p>
-              </div>
-
-              <div class="breakdown-item">
-                <code>animation: slide 2s infinite</code>
-                <p>
-                  Applies the animation to an element, running for 2 seconds and
-                  repeating forever.
-                </p>
-              </div>
-
-              <div class="breakdown-item">
-                <code>calc(100% - 50px)</code>
-                <p>
-                  We use this so the square ends exactly at the container’s
-                  right edge. The container is 100% wide, and subtracting 50px
-                  (the square’s width) keeps it fully visible instead of sliding
-                  off-screen.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Transitions -->
-        <section class="transitions">
-          <h2 class="section-title">Transitions</h2>
-        </section>
-
-        <!-- Properties -->
-        <section class="properties">
-          <h2 class="section-title">Properties</h2>
-        </section>
-
-        <!-- Functions -->
-        <section class="functions">
-          <h2 class="section-title">Functions</h2>
-        </section>
-
-        <!-- performance -->
-        <section class="performance">
-          <h2 class="section-title">Performance and Accessibility</h2>
-        </section>
-
-        <!-- Transitions -->
-        <section class="transitions">
-          <h2 class="section-title">Transitions</h2>
-        </section>
+                      <div class="transition-example">
+                        <p>Hover over the boxes below — each starts its animation with a different delay:</p>
+                        <div class="example-cards">
+                          <div class="example-box delay-box delay0">0s</div>
+                          <div class="example-box delay-box delay1">0.3s</div>
+                          <div class="example-box delay-box delay2">0.6s</div>
+                          <div class="example-box delay-box delay3">0.9s</div>
+                        </div>
+                      </div>
+                      </div>
+                      </section>
 
         <!-- Properties -->
         <section class="properties">
